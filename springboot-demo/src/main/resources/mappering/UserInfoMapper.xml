@@ -19,7 +19,7 @@
     delete from userinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.example.demo.entity.UserInfo" resultMap="java.lang.Integer">
+  <insert id="insert" parameterType="com.example.demo.entity.UserInfo">
     insert into userinfo (id, username, password
       )
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}

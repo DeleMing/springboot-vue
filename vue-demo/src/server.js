@@ -1,7 +1,8 @@
 import axios from 'axios';
-import router from 'router/index';
+import router from 'vue-router'
 // 创建axios实例
 const service = axios.create({
+  baseURL: 'http://localhost:8888/api/',
   timeout: 30000 // 请求超时时间
 })
 // 添加request拦截器

@@ -1,10 +1,12 @@
 <template>
-  <div>222</div>
+  <div>
+    <button @click="addUser">请求addUser接口</button>
+  </div>
 </template>
 
 
 <script>
-  // import {post} from '../axios.js'
+  import {post} from '../server.js'
 
   export default {
     name:'AddUser',
@@ -13,13 +15,13 @@
     },
     methods:{
       addUser(){
-        let url = '';
+        let url = '/springbootTest/swagger';
         let data = '';
-        // post(url, data).then(res =>{
-        //
-        // }).catch( res => {
-        //
-        // })
+        post(url, data).then( res => {
+          console.log(res)
+        }).catch( res => {
+          console.log(res)
+        })
       }
     }
   }

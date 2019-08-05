@@ -37,7 +37,7 @@
 
 		# 服务地址
 		 location /api/{   # 这里的api是前端代码(axios.js)里配置的
-            proxy_pass http://127.0.0.1:8090; # 这里配置后端服务地址
+            proxy_pass http://127.0.0.1:8090/; # 这里配置后端服务地址
         }
 
     
